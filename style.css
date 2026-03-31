@@ -1,46 +1,264 @@
+:root {
+    --primary-color: #D16B05;
+    --secondary-color: #1B1D24;
+    --text-color: rgba(230, 232, 236, 0.82);
+    --accent-color: #2A2D36;
+    --background-color: #121319;
+    --white: #1A1C23;
+    --shadow-color: rgba(0, 0, 0, 0.55);
+    --radius: 16px;
+    --spacing: 1.75rem;
+    --line-height: 1.4;
+    --font-size-base: 1.0rem;
+}
+
 body {
-    font-family: Arial, sans-serif;
+    margin: 0;
+    font-family: 'PoliceTexte', system-ui, sans-serif;
+    background:
+        radial-gradient(circle at top, #1C1F28 0%, #121319 60%),
+        repeating-linear-gradient(
+            0deg,
+            rgba(255,255,255,0.025),
+            rgba(255,255,255,0.025) 1px,
+            transparent 1px,
+            transparent 2px
+        );
+    color: var(--text-color);
+    line-height: var(--line-height);
+    font-size: var(--font-size-base);
+}
+.header-image,
+.container > .header-image,
+body > .header-image {
+    width: 100vw;
+    height: auto;
+    object-fit: contain;
+    display: block;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    border: none;
 }
 
 header {
-    background-color: #333;
-    color: white;
-    padding: 1rem;
+    background: linear-gradient(180deg, #1F222C 0%, #14161C 100%);
+    color: #F5F5F5;
+    padding: 1.0rem 1rem;
     text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.7);
 }
 
-nav ul {
-    list-style: none;
-    padding: 0;
+header h1 {
+    font-family: 'PoliceTitre', sans-serif;
+    font-size: 2.0rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
 }
 
-nav ul li {
-    display: inline;
-    margin: 0 1rem;
+.container {
+    max-width: 960px;
+    margin: auto;
+    padding: 1.0rem 1.0rem;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
+.content-card,
+#conseils {
+    background:
+        linear-gradient(180deg, rgba(255,255,255,0.04), rgba(0,0,0,0.08)),
+        repeating-linear-gradient(
+            0deg,
+            rgba(255,255,255,0.03),
+            rgba(255,255,255,0.03) 1px,
+            transparent 1px,
+            transparent 2px
+        );
+    background-color: var(--white);
+    border-radius: var(--radius);
+    box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,0.04),
+        0 18px 40px rgba(0,0,0,0.6);
+    padding: var(--spacing);
+    margin-bottom: 1rem;
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
-main {
-    padding: 2rem;
+.content-card:hover,
+#conseils:hover {
+    transform: translateY(-6px);
+    box-shadow:
+        inset 0 0 0 1px rgba(255,255,255,0.06),
+        0 28px 60px rgba(0,0,0,0.8);
 }
 
-section {
-    margin-bottom: 2rem;
+.content-card h2,
+.content-card h3,
+.content-card h4,
+#conseils h2 {
+    font-family: 'PoliceTitre', sans-serif;
+    color: var(--primary-color);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-top: 0;
 }
 
-footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem;
-    position: fixed;
+.content-card h2,
+#conseils h2 {
+    font-size: 1.5rem;
+}
+
+.content-card h3 {
+    font-size: 1.30rem;
+}
+
+p {
+    font-family: 'PoliceTexte', sans-serif;
+    color: rgba(230,232,236,0.78);
+    letter-spacing: 0.015em;
+    text-align: left;
+}
+
+ul, li {
+    color: rgba(230,232,236,0.75);
+}
+
+a {
+    color: var(--primary-color);
+    border-bottom: 1px solid rgba(209,107,5,0.4);
+}
+
+a:hover {
+    color: #FF8A1F;
+    border-bottom-color: #FF8A1F;
+}
+
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    .content-card h2,
+    #conseils h2 {
+        font-size: 1.5rem;
+    }
+}
+
+/* ===== Barre recherche automatique ===== */
+#searchBarAuto {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 0.75rem 1rem;        /* plus d'espace autour */
+    background: #121319;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);  /* ombre subtile */
+    border-bottom: 1px solid rgba(255,255,255,0.1); /* séparation visuelle */
+    border-radius: var(--radius);
+    margin-bottom: 1rem;
+}
+
+#searchInputAuto {
     width: 100%;
-    bottom: 0;
+    padding: 0.75rem 1rem;       /* padding augmenté */
+    border-radius: var(--radius);
+    border: none;
+    background: var(--secondary-color);
+    color: var(--text-color);
+    font-family: 'PoliceTexte', sans-serif;
+    font-size: 1.1rem;           /* texte plus grand */
+    box-shadow: inset 0 2px 4px rgba(0,0,0,0.3); /* profondeur */
+    transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+#searchInputAuto:focus {
+    outline: none;
+    background: rgba(42,45,54,0.9);
+    box-shadow: inset 0 2px 8px rgba(0,0,0,0.5);
+}
+
+/* ===== Chapitrage automatique ===== */
+#chapitresAuto {
+    margin-bottom: 1.5rem;       /* plus d’espace entre chapitres */
+    padding: 1rem;
+    background: var(--white);
+    border-radius: var(--radius);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+#chapitresAuto a {
+    display: block;
+    padding: 0.5rem 0;          /* plus d’espace autour du lien */
+    color: var(--primary-color);
+    text-decoration: none;
+    font-size: 1.05rem;          /* texte plus lisible */
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+#chapitresAuto a:hover {
+    color: #FF8A1F;
+    transform: translateX(5px);
+}
+
+/* ===== Resultats recherche ===== */
+.searchHighlight {
+    background: #D16B05;
+    color: black;
+    padding: 3px 5px;            /* padding plus confortable */
+    border-radius: 6px;
+    font-weight: 600;             /* texte mis en valeur */
+}
+
+/* ===== Info recherche ===== */
+#searchInfo {
+    font-size: 0.9rem;           /* légèrement plus grand */
+    opacity: 0.8;
+    margin-top: 5px;
+    font-style: italic;
+}
+
+.btnLire {
+    margin-left: 5px;
+    cursor: pointer;
+    background: #D16B05;
+    color: black;
+    border: none;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    padding: 2px 5px;
+}
+.btnLire:hover {
+    background: #FF8A1F;
+}
+
+#categories {
+    padding: 2rem;
+    text-align: center;
+}
+
+.category-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.category {
+    background: var(--accent-color);
+    border-radius: var(--radius);
+    padding: 1.5rem;
+    box-shadow: 0 4px 8px var(--shadow-color);
+    transition: transform 0.3s ease;
+}
+
+.category:hover {
+    transform: translateY(-5px);
+}
+
+.category img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 1rem;
+}
+
+.category h3 {
+    margin: 0;
+    color: var(--text-color);
 }

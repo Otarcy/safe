@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="fr">
+ <head>
+  <link href="../../../../css/style.css" rel="stylesheet"/>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+ </head>
+ <img alt="Image d'en-tête" class="header-image" src="CRÉER_UN_SYSTÈME_D’ÉCLAIRAGE_AUTONOME_IMAGE.JPG"/>
+ <body>
+  <header>
+   <h1>
+    Créer un Système d'Éclairage Autonome en Survie
+   </h1>
+  </header>
+  <main>
+   <div class="container">
+    <section class="content-card">
+     <p>
+      L'éclairage est une nécessité fondamentale en survie. Il assure la sécurité, permet de travailler et de se déplacer la nuit, et a un impact positif sur le moral. Dépendre uniquement de lampes de poche à piles jetables n'est pas viable à long terme. Apprenez à créer des systèmes d'éclairage autonomes et durables en utilisant les ressources disponibles.
+     </p>
+    </section>
+    <section class="content-card">
+     <h2>
+      Réaliser une Guirlande LED 12V
+     </h2>
+     <p>
+      Une guirlande LED est un excellent moyen d'éclairer un campement, un abri ou même un sentier de manière efficace et économe en énergie. Les LED sont très performantes et peuvent fonctionner longtemps avec une batterie 12V.
+     </p>
+     <ul>
+      <li>
+       <strong>
+        Pourquoi 12V ?
+       </strong>
+       De nombreuses sources d'énergie de survie sont en 12V (batteries de voiture, batteries AGM, certaines sorties de panneaux solaires). Utiliser ce voltage simplifie le montage.
+      </li>
+      <li>
+       <strong>
+        Composants nécessaires
+       </strong>
+       :
+       <ul>
+        <li>
+         <strong>
+          LEDs (Diodes Électroluminescentes)
+         </strong>
+         : Procurez-vous des LEDs individuelles. Les LEDs blanches sont les plus lumineuses. Idéalement, choisissez des LEDs de 3V à 3.5V, ce qui est courant.
+        </li>
+        <li>
+         <strong>
+          Résistances
+         </strong>
+         : Les LEDs ne se branchent pas directement sur une source 12V sans résistance, au risque de les griller instantanément. Chaque LED a besoin d'une résistance en série pour limiter le courant.
+         <ul>
+          <li>
+           <strong>
+            Comment calculer la résistance (simplifié)
+           </strong>
+           : Pour une LED de 3V branchée sur 12V, la résistance doit "chuter" 9V (12V - 3V). Si vous voulez que la LED consomme environ 20mA (0.02 Ampères, un courant standard pour une LED), la résistance nécessaire est de ≈ 9V/0.02A=450 Ohms. Une résistance entre 330 Ohms et 680 Ohms fera l'affaire. Récupérez-les sur de vieilles cartes électroniques.
+          </li>
+         </ul>
+        </li>
+        <li>
+         <strong>
+          Fils conducteurs
+         </strong>
+         : Du fil électrique (au moins deux couleurs différentes pour la polarité).
+        </li>
+        <li>
+         <strong>
+          Pile/Batterie 12V
+         </strong>
+         : Source d'alimentation (batterie de voiture, batterie de camping-car, petite batterie AGM).
+        </li>
+        <li>
+         <strong>
+          Interrupteur (optionnel)
+         </strong>
+         : Pour allumer/éteindre la guirlande.
+        </li>
+        <li>
+         <strong>
+          Outils
+         </strong>
+         : Pince coupante/dénudante, couteau, ruban isolant.
+        </li>
+       </ul>
+      </li>
+      <li>
+       <strong>
+        Montage (en parallèle avec résistance par LED)
+       </strong>
+       :
+	   <ul>
+	   <ol>
+        <li>
+         <strong>Dénudez les fils :</strong> Préparez des segments de fils.
+        </li>
+        <li>
+        <strong> Préparez les LEDs :</strong> Identifiez la patte positive (plus longue) et négative (plus courte ou méplat) de chaque LED.
+        </li>
+        <li>
+        <strong> Montez chaque paire LED + Résistance :</strong> Soudez ou torsadez une résistance à la patte positive de chaque LED. Isolez bien la connexion.
+        </li>
+        <li>
+         <strong>Connectez les paires en parallèle :</strong> Reliez toutes les pattes négatives des LEDs ensemble à un fil commun (le fil négatif de la guirlande). Reliez toutes les extrémités des résistances (qui sont connectées aux pattes positives des LEDs) à un autre fil commun (le fil positif de la guirlande).
+        </li>
+        <li>
+         <strong>Test et Isolation :</strong> Connectez les fils positifs et négatifs de votre guirlande à la batterie 12V (via un interrupteur si vous en avez un). Les LEDs devraient s'allumer. Isolez toutes les connexions avec du ruban isolant ou de la gaine thermorétractable.
+        </li>
+       </ol>
+      </li>
+	  </ul>
+      <li>
+       <strong>
+        Montage (en série, pour économiser les résistances)
+       </strong>
+       : Si vous n'avez pas beaucoup de résistances, vous pouvez brancher les LEDs en série.
+       <ul>
+	   <ol>
+        <li>
+        <strong> Calculez le nombre de LEDs :</strong> Pour 12V, et des LEDs de 3V, vous pouvez en mettre 4 en série (4 LEDs x 3V = 12V). Cela ne nécessitera pas de résistance ou une très petite. Si la tension de la batterie est légèrement plus élevée que la somme des LEDs, une petite résistance sera nécessaire.
+        </li>
+        <li>
+         <strong>Connectez en série :</strong> Reliez la patte négative d'une LED à la patte positive de la suivante. Répétez pour toutes les LEDs de la série.
+        </li>
+        <li>
+         <strong>Connectez la série à la batterie :</strong> La patte positive de la première LED se connecte au pôle positif de la batterie, et la patte négative de la dernière LED se connecte au pôle négatif de la batterie.
+        </li>
+        <li>
+         <strong>Test et Isolation :</strong> Comme précédemment, testez et isolez.
+        </li>
+       </ol>
+	   </ul>
+      </li>
+	  
+      <li>
+       <strong>
+        Avantages
+       </strong>
+       : Lumière diffuse et agréable, faible consommation, facile à déployer.
+      </li>
+      <li>
+       <strong>
+        Conseil
+       </strong>
+       : Prévoyez des crochets ou des attaches (ficelle, fil de fer) pour suspendre facilement votre guirlande dans votre abri ou autour de votre campement.
+      </li>
+     </ul>
+    </section>
+    <section class="content-card">
+     <h2>
+      Fabrication d’une Lampe Frontale Artisanale
+     </h2>
+     <p>
+      Une lampe frontale libère vos mains, ce qui est crucial pour travailler ou naviguer la nuit.
+     </p>
+     <ul>
+      <li>
+       <strong>
+        Composants nécessaires
+       </strong>
+       :
+       <ul>
+        <li>
+         <strong>
+          LED
+         </strong>
+         : Une ou plusieurs LEDs puissantes (blanches ou de couleur, selon l'usage). Les LEDs de 3W ou 5W sont idéales mais nécessitent une source de courant plus robuste.
+        </li>
+        <li>
+         <strong>
+          Source d'énergie
+         </strong>
+         : Une ou deux piles AA/AAA, une petite batterie Li-ion de smartphone (3.7V - attention, à manipuler avec précaution !), ou une petite batterie externe (power bank) si vous avez un câble USB à sacrifier.
+        </li>
+        <li>
+         <strong>
+          Résistance
+         </strong>
+         : Indispensable si la tension de la source est supérieure à la tension de la LED (voir section précédente pour le calcul).
+        </li>
+        <li>
+         <strong>
+          Interrupteur
+         </strong>
+         : Petit interrupteur à poussoir ou à glissière.
+        </li>
+        <li>
+         <strong>
+          Fils conducteurs
+         </strong>
+         : Fins et souples.
+        </li>
+        <li>
+         <strong>
+          Support
+         </strong>
+         : Une bande élastique (élastique de vêtement, sandow fin), une bande de tissu solide.
+        </li>
+        <li>
+         <strong>
+          Boîtier de fortune
+         </strong>
+         : Un petit flacon de médicament vide, un morceau de tube en plastique, une boîte de menthe vide, ou même un bloc de bois évidé.
+        </li>
+        <li>
+         <strong>
+          Outils
+         </strong>
+         : Couteau, petites pinces, ruban isolant.
+        </li>
+       </ul>
+      </li>
+      <li>
+       <strong>
+        Montage
+       </strong>
+       :
+	   <ul>
+       <ol>
+        <li>
+         <strong>Préparez la LED :</strong> Soudez ou torsadez la résistance à la patte positive de la LED (si nécessaire). Isolez.
+        </li>
+        <li>
+         <strong>Intégrez la LED au boîtier :</strong> Fixez la LED à l'avant de votre boîtier improvisé. Vous pouvez percer un trou, la coller, ou la maintenir avec du fil.
+        </li>
+        <li>
+         <strong>Câblage :</strong>
+         <ul>
+          <li>
+           Connectez le pôle positif de la pile (ou batterie) à l'interrupteur.
+          </li>
+          <li>
+           Connectez l'autre borne de l'interrupteur à l'entrée de la LED (via la résistance).
+          </li>
+          <li>
+           Connectez la patte négative de la LED au pôle négatif de la pile.
+          </li>
+         </ul>
+        </li>
+        <li>
+         <strong>Sécurisez la source d'énergie :</strong> Si vous utilisez des piles, créez un petit compartiment ou maintenez-les fermement avec du ruban adhésif ou des élastiques.
+        </li>
+        <li>
+         <strong>Test et Isolation :</strong> Testez le montage. Si la lumière s'allume, isolez soigneusement toutes les connexions exposées.
+        </li>
+        <li>
+         <strong>Fixation sur le support :</strong> Attachez le boîtier à la bande élastique ou au bandeau en tissu. Assurez-vous qu'il soit bien stable et qu'il puisse être ajusté sur la tête.
+        </li>
+       </ol>
+      </li>
+	  </ul>
+      <li>
+       <strong>
+        Avantages
+       </strong>
+       : Mains libres, adaptable à vos besoins (puissance, autonomie), utilisable avec des composants de récupération.
+      </li>
+      <li>
+       <strong>
+        Conseil
+       </strong>
+       : Visez la simplicité. Moins il y a de composants, moins il y a de points de défaillance.
+      </li>
+     </ul>
+    </section>
+    <section class="content-card">
+     <h2>
+      Éclairage de Camp Alimenté par Batterie/Dynamo
+     </h2>
+     <p>
+      Un éclairage de camp robuste est essentiel pour les longues soirées, la cuisine, ou la préparation des tâches du lendemain.
+     </p>
+     <ul>
+      <li>
+       <strong>
+        Alimentation par Batterie
+       </strong>
+       :
+       <ul>
+        <li>
+         <strong>
+          Source
+         </strong>
+         : Une batterie 12V (batterie de voiture, moto, AGM). Si vous n'avez qu'une batterie 5V (power bank), votre éclairage sera limité aux LEDs simples ou guirlandes USB.
+        </li>
+        <li>
+         <strong>
+          Type d'éclairage
+         </strong>
+         : La guirlande LED 12V (voir section précédente) est idéale. Vous pouvez aussi utiliser des spots LED 12V existants (souvent vendus pour le camping ou les véhicules).
+        </li>
+        <li>
+         <strong>
+          Montage
+         </strong>
+         : Connectez simplement votre guirlande ou vos spots à la batterie via un interrupteur. Assurez-vous d'avoir un fusible sur le circuit si vous utilisez de puissants éclairages (un fusible de 5A ou 10A est souvent suffisant).
+        </li>
+        <li>
+         <strong>
+          Gestion de la batterie
+         </strong>
+         : Surveillez la décharge de votre batterie pour ne pas la vider complètement, ce qui pourrait l'endommager, surtout une batterie de démarrage de véhicule.
+        </li>
+       </ul>
+      </li>
+      <li>
+       <strong>
+        Alimentation par Dynamo (Manivelle ou Pédale)
+       </strong>
+       :
+       <ul>
+        <li>
+         <strong>
+          Source
+         </strong>
+         : Une dynamo manuelle intégrée (à une radio/lampe) ou une dynamo de vélo/vélo-générateur.
+        </li>
+        <li>
+         <strong>
+          Type d'éclairage
+         </strong>
+         :
+         <ul>
+          <li>
+           <strong>
+            Direct
+           </strong>
+           : Connectez une ou plusieurs LEDs (avec des résistances si nécessaire) directement à la sortie de la dynamo. La lumière ne s'allumera que lorsque vous actionnez la dynamo. C'est utile pour de courtes périodes d'éclairage immédiat.
+          </li>
+          <li>
+           <strong>
+            Avec stockage
+           </strong>
+           : Si votre dynamo peut recharger une petite batterie (NiMH ou Li-ion), connectez les LEDs à cette batterie. Vous générez l'énergie quand vous pouvez, et l'utilisez quand vous en avez besoin.
+          </li>
+         </ul>
+        </li>
+        <li>
+         <strong>
+          Avantages
+         </strong>
+         : Énergie illimitée (tant que vous avez de l'énergie physique), indépendance totale des conditions météo.
+        </li>
+        <li>
+         <strong>
+          Inconvénients
+         </strong>
+         : Génération d'énergie laborieuse, faible puissance lumineuse.
+        </li>
+       </ul>
+      </li>
+      <li>
+       <strong>
+        Conseils
+       </strong>
+       :
+       <ul>
+        <li>
+         <strong>
+          Éclairage directionnel vs. Ambiant
+         </strong>
+         : Utilisez des lampes frontales pour les tâches spécifiques et une guirlande ou une lanterne pour l'éclairage général du camp.
+        </li>
+        <li>
+         <strong>
+          Lumière rouge
+         </strong>
+         : Si possible, utilisez des LEDs rouges pour un éclairage d'appoint. La lumière rouge préserve votre vision nocturne et est moins visible de loin.
+        </li>
+        <li>
+         <strong>
+          Réflecteurs
+         </strong>
+         : Placez des surfaces réfléchissantes (papier d'aluminium, couverture de survie) derrière vos sources de lumière pour maximiser leur diffusion et leur intensité.
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </section>
+    <section class="content-card">
+     <h2>
+      Montage Solaire Fixe ou Mobile
+     </h2>
+     <p>
+      L'énergie solaire est la source la plus durable et autonome en survie.
+     </p>
+     <ul>
+      <li>
+       <strong>
+        Montage Solaire Mobile (Portable)
+       </strong>
+       :
+       <ul>
+        <li>
+         <strong>
+          Composants
+         </strong>
+         : Panneau solaire portable (5W à 50W), câble USB, batterie externe (power bank), câble de charge pour vos appareils.
+        </li>
+        <li>
+         <strong>
+          Principe
+         </strong>
+         : Le panneau solaire (souvent pliable ou compact) charge une batterie externe. La batterie externe charge ensuite vos appareils.
+        </li>
+        <li>
+         <strong>
+          Avantages
+         </strong>
+         : Extrêmement portable, facile à déployer, indépendant des prises.
+        </li>
+        <li>
+         <strong>
+          Inconvénients
+         </strong>
+         : Dépend de l'ensoleillement, production plus faible.
+        </li>
+        <li>
+         <strong>
+          Optimisation
+         </strong>
+         : Orienté directement vers le soleil, à 90 degrés, et ajusté toutes les 1 à 2 heures pour suivre la course du soleil. Évitez les ombres partielles qui réduisent drastiquement l'efficacité.
+        </li>
+       </ul>
+      </li>
+      <li>
+       <strong>
+        Montage Solaire Fixe (pour un campement prolongé)
+       </strong>
+       :
+       <ul>
+        <li>
+         <strong>
+          Composants
+         </strong>
+         : Panneau solaire plus grand (50W à 100W et plus), régulateur de charge solaire (MPPT ou PWM), batterie de stockage 12V (AGM, plomb-acide de véhicule), câbles, convertisseur DC/AC (onduleur) si besoin de 220V, et vos lumières/appareils.
+        </li>
+        <li>
+         <strong>
+          Principe
+         </strong>
+         : Le panneau charge la batterie via le régulateur. La batterie alimente ensuite directement vos appareils 12V ou via l'onduleur pour vos appareils 220V.
+        </li>
+        <li>
+         <strong>
+          Avantages
+         </strong>
+         : Production d'énergie plus significative, permet d'alimenter plus d'appareils, crée une réserve d'énergie.
+        </li>
+        <li>
+         <strong>
+          Inconvénients
+         </strong>
+         : Moins portable, installation plus complexe et lourde, nécessite plus de composants.
+        </li>
+        <li>
+         <strong>
+          Installation
+         </strong>
+         :
+         <ul>
+          <li>
+           <strong>
+            Placement du panneau
+           </strong>
+           : Choisissez un endroit ensoleillé, sans ombre. Inclinez le panneau pour qu'il soit perpendiculaire aux rayons du soleil le plus longtemps possible (ajustement saisonnier si possible).
+          </li>
+          <li>
+           <strong>
+            Câblage
+           </strong>
+           : Connectez le panneau au régulateur de charge. Connectez le régulateur à la batterie. Connectez vos appareils (ou l'onduleur) à la batterie. Respectez toujours la polarité (+ et -).
+          </li>
+          <li>
+           <strong>
+            Protection
+           </strong>
+           : Utilisez des fusibles aux points clés (entre panneau et régulateur, entre batterie et appareils/onduleur). Protégez toutes les connexions de l'eau et de l'humidité.
+          </li>
+          <li>
+           <strong>
+            Ventilation
+           </strong>
+           : Si vous utilisez une batterie au plomb-acide, assurez-vous qu'elle soit dans un espace ventilé, car elle peut dégager des gaz inflammables pendant la charge.
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </section>
+    <section class="content-card">
+     <h2>
+      Conseils Supplémentaires pour l'Éclairage Autonome
+     </h2>
+     <ul>
+      <li>
+       <strong>
+        Privilégiez les LED
+       </strong>
+       : Elles sont de loin la technologie d'éclairage la plus économe en énergie et la plus durable.
+      </li>
+      <li>
+       <strong>
+        Gestion de l'énergie
+       </strong>
+       : Éteignez toujours les lumières quand vous n'en avez pas besoin. Utilisez des minuteurs si possible.
+      </li>
+      <li>
+       <strong>
+        Lumière et moral
+       </strong>
+       : L'éclairage a un impact psychologique important. Une lumière chaude et suffisante peut grandement améliorer le moral de votre groupe.
+      </li>
+      <li>
+       <strong>
+        Protection
+       </strong>
+       : Protégez vos lampes et batteries de l'humidité et des chocs.
+      </li>
+      <li>
+       <strong>
+        Pièces de rechange
+       </strong>
+       : Ayez toujours quelques LEDs et résistances supplémentaires, ainsi que du ruban isolant et du fil.
+      </li>
+     </ul>
+    </section>
+    <section class="content-card">
+     <h2>
+      Conclusion
+     </h2>
+     <p>
+      Créer un système d'éclairage autonome est un pilier essentiel de la survie, offrant sécurité, confort et efficacité après la tombée de la nuit. Que vous optiez pour des guirlandes LED 12V pour le campement, des lampes frontales improvisées pour les tâches manuelles, un éclairage alimenté par une dynamo ou un système solaire plus élaboré, chaque source de lumière fabriquée ou optimisée contribue à votre autonomie. En comprenant les principes de base et en utilisant judicieusement les ressources à votre disposition, vous transformerez l'obscurité en une opportunité de mieux vivre et de mieux vous préparer.
+     </p>
+    </section>
+   </div>
+  </main>
+  <footer>
+   <p>
+    © 2025 - Safe
+   </p>
+  </footer>
+ </body>
+</html>
