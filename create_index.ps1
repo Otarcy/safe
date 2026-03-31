@@ -14,7 +14,7 @@ Get-ChildItem $articlesPath -Directory -Recurse | ForEach-Object {
 
     if ($htmlFiles) {
         $html = $htmlFiles[0]
-        $image = $html.Name -replace '\.html$', '_IMAGE.JPG'
+        $image = $html.Name -replace '\.html$', '_IMAGE.jpg'
         if (!(Test-Path "$dir\$image")) { $image = 'icon.jpg' }
         $content = @"
 <!DOCTYPE html>
