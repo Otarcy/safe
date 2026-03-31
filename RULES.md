@@ -13,6 +13,9 @@
    - Si un dossier contient un seul fichier HTML, le lien pointe directement vers ce fichier HTML.
    - Si un dossier contient plusieurs fichiers ou sous-dossiers, le lien pointe vers le dossier (avec index.html pour grille).
 
+4. **Affichage des Sous-Dossiers** :
+   - Les sous-dossiers sont affichés comme des items dans la grille, sauf lorsque le dossier contient un fichier HTML, auquel cas on affiche directement le HTML.
+
 4. **Affichage en Grille** :
    - Utiliser une grille responsive avec cartes larges (min 250px).
    - Chaque carte contient une image (couverture), un titre, et un lien.
