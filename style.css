@@ -235,7 +235,7 @@ a:hover {
 
 .category-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     margin-top: 2rem;
 }
@@ -243,9 +243,10 @@ a:hover {
 .category {
     background: var(--accent-color);
     border-radius: var(--radius);
-    padding: 1.5rem;
+    padding: 1rem;
     box-shadow: 0 4px 8px var(--shadow-color);
     transition: transform 0.3s ease;
+    overflow: hidden;
 }
 
 .category:hover {
@@ -253,12 +254,15 @@ a:hover {
 }
 
 .category img {
-    width: 80px;
-    height: 80px;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: var(--radius);
     margin-bottom: 1rem;
 }
 
 .category h3 {
     margin: 0;
     color: var(--text-color);
+    font-size: 1.2rem;
 }
