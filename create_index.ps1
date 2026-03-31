@@ -23,7 +23,7 @@ Get-ChildItem $articlesPath -Directory -Recurse | ForEach-Object {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>$title - Bibliothèque - Safe</title>
-    <link rel="stylesheet" href="$rel style.css">
+    <link rel="stylesheet" href="$($rel)style.css">
 </head>
 <body>
     <header>
@@ -32,7 +32,7 @@ Get-ChildItem $articlesPath -Directory -Recurse | ForEach-Object {
             <ul>
                 <li><a href="$rel index.html">Accueil</a></li>
                 <li><a href="$parentRel index.html">Bibliothèque</a></li>
-                <li><a href="$parentRel $parentName/index.html">$parentName</a></li>
+                
             </ul>
         </nav>
     </header>
@@ -52,7 +52,7 @@ Get-ChildItem $articlesPath -Directory -Recurse | ForEach-Object {
     <footer>
         <p>&copy; 2025 Safe. Tous droits réservés.</p>
     </footer>
-    <script src="$rel script.js"></script>
+    <script src="$($rel)script.js"></script>
 </body>
 </html>
 "@
@@ -76,7 +76,7 @@ Get-ChildItem $articlesPath -Directory -Recurse | ForEach-Object {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>$title - Bibliothèque - Safe</title>
-    <link rel="stylesheet" href="$rel style.css">
+    <link rel="stylesheet" href="$($rel)style.css">
 </head>
 <body>
     <header>
@@ -85,7 +85,7 @@ Get-ChildItem $articlesPath -Directory -Recurse | ForEach-Object {
             <ul>
                 <li><a href="$rel index.html">Accueil</a></li>
                 <li><a href="$parentRel index.html">Bibliothèque</a></li>
-                <li><a href="$parentRel $parentName/index.html">$parentName</a></li>
+                
             </ul>
         </nav>
     </header>
@@ -100,7 +100,7 @@ $grid
     <footer>
         <p>&copy; 2025 Safe. Tous droits réservés.</p>
     </footer>
-    <script src="$rel script.js"></script>
+    <script src="$($rel)script.js"></script>
 </body>
 </html>
 "@
@@ -112,7 +112,7 @@ $grid
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>$title - Bibliothèque - Safe</title>
-    <link rel="stylesheet" href="$rel style.css">
+    <link rel="stylesheet" href="$($rel)style.css">
 </head>
 <body>
     <header>
@@ -121,7 +121,7 @@ $grid
             <ul>
                 <li><a href="$rel index.html">Accueil</a></li>
                 <li><a href="$parentRel index.html">Bibliothèque</a></li>
-                <li><a href="$parentRel $parentName/index.html">$parentName</a></li>
+                
             </ul>
         </nav>
     </header>
@@ -131,7 +131,7 @@ $grid
     <footer>
         <p>&copy; 2025 Safe. Tous droits réservés.</p>
     </footer>
-    <script src="$rel script.js"></script>
+    <script src="$($rel)script.js"></script>
 </body>
 </html>
 "@
